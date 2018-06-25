@@ -8,7 +8,7 @@ var setupButton = function(templ, uri) {
 
 
 $(document).on("loadedrecordform.aspace", function(event, $container) {
-  if (tree && tree.current().data('jsonmodel_type') == 'archival_object') {
+  if (tree && tree.current().data('jsonmodel_type') == 'archival_object' && tree.current().data('child_count') > 0) {
       var uri = tree.current().data('uri');
       setupButton("childPublisherPublishButtonTemplate", uri);
       setupButton("childPublisherUnpublishButtonTemplate", uri);
