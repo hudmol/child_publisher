@@ -1,7 +1,10 @@
 module ChildPublisher
 
   def _publish_children!(setting, opts)
-    object_graph = self.object_graph(ChildPublishing.filters.merge(opts))
+    filters = ChildPublishing.filters.merge(opts)
+    filters[Note] = filters[Note].exclude(:archival_object_id => self.id)
+
+    object_graph = self.object_graph(filters)
 
     object_graph.each do |model, ids|
       next unless model.publishable?
