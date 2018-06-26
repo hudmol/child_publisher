@@ -1,8 +1,8 @@
 en:
   plugins:
     child_publisher:
-      publish_toolbar_button: Publish Children
-      unpublish_toolbar_button: Unpublish Children
+      publish_toolbar_button: Publish All Children
+      unpublish_toolbar_button: Unpublish All Children
       messages:
         published: Child records successfully published
         unpublished: Child records successfully unpublished
