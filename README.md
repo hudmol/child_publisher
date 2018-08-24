@@ -7,9 +7,9 @@ Developed against ArchivesSpace v2.4.0 by Hudson Molonglo for Yale University.
 
 ## Summary
 
-Two new options are available in the `More` menu on the component toolbar for components that have children - `Publish All Children` and `Unpublish All Children`. When selected, all child components of the current component will be published or unpublished respectively.
+Two new options are available in the `More` menu on the component toolbar for components that have children - `Publish this and all children` and `Unpublish all children`. When selected, all child components of the current component will be published or unpublished respectively.
 
-The published state of the current component and its nested records is unchanged.
+In the case of publication the current record is also published. When unpublishing the published state of the current component and its nested records is unchanged.
 
 The published state of some `Note` records attached to child components is also unchanged.
 

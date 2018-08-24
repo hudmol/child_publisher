@@ -9,7 +9,7 @@ module ChildPublisher
     object_graph.each do |model, ids|
       next unless model.publishable?
 
-      model.handle_publish_flag(model == self.class ? ids.reject {|i| i == self.id} : ids, setting)
+      model.handle_publish_flag(model == self.class && !setting ? ids.reject {|i| i == self.id} : ids, setting)
     end
   end
 
