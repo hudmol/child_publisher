@@ -2,7 +2,7 @@ module ChildPublisher
 
   def _publish_children!(setting, opts)
     filters = ChildPublishing.filters.merge(opts)
-    filters[Note] = filters[Note].exclude(:archival_object_id => self.id)
+    filters[Note] = filters[Note].exclude(:archival_object_id => self.id) unless setting
 
     object_graph = self.object_graph(filters)
 
