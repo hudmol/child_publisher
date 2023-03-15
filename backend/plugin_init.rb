@@ -1,5 +1,5 @@
 
-ChildPublishing.add_filter(Note.exclude{Sequel.like(:notes, '%"content":"https://preservica.library.yale.edu%')})
+ChildPublishing.add_filter(Note.exclude{Sequel.like(:notes, '%"content":"https://preservica.library.yale.edu%') | Sequel.like(:notes, '%"content":"Former child record (uri=/repositories/%')})
 
 ArchivalObject.include(ChildPublisher)
 
