@@ -5,7 +5,7 @@ ArchivalObject.include(ChildPublisher)
 
 Resource.class_eval do
   def publish!(setting = true)
-    object_graph = self.object_graph(ChildPublishing.filters)
+    object_graph = setting ? self.object_graph(ChildPublishing.filters) : self.object_graph
 
     object_graph.each do |model, ids|
       next unless model.publishable?
