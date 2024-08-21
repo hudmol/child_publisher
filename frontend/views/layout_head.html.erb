@@ -3,11 +3,11 @@
   <%= javascript_include_tag "#{AppConfig[:frontend_proxy_prefix]}assets/child_publisher.js" %>
 
   <script type="text/template" id="childPublisherPublishButtonTemplate">
-    <%= link_to I18n.t("plugins.child_publisher.publish_toolbar_button"), {:controller => :child_publisher, :action => :publish_children, :uri => 'CP_AO_URI'} %>
+    <%= link_to I18n.t("plugins.child_publisher.publish_toolbar_button"), {:controller => :child_publisher, :action => :publish_children, :uri => 'CP_AO_URI'}, :class => 'dropdown-item' %>
   </script>
 
   <script type="text/template" id="childPublisherUnpublishButtonTemplate">
-    <%= link_to I18n.t("plugins.child_publisher.unpublish_toolbar_button"), {:controller => :child_publisher, :action => :unpublish_children, :uri => 'CP_AO_URI'} %>
+    <%= link_to I18n.t("plugins.child_publisher.unpublish_toolbar_button"), {:controller => :child_publisher, :action => :unpublish_children, :uri => 'CP_AO_URI'}, :class => 'dropdown-item' %>
   </script>
 
 <% end %>
