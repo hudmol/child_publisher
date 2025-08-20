@@ -1,6 +1,6 @@
 var setupButton = function(templ, uri) {
   $publish = $(AS.renderTemplate(templ));
-  var href = $publish.attr('href').replace('CP_AO_URI', uri);
+  var href = $publish.addClass('dropdown-item').attr('href').replace('CP_AO_URI', uri);
   $publish.attr('href', href);
   $('#other-dropdown .dropdown-menu').append($('<li />').append($publish));
   $('#other-dropdown').show();
